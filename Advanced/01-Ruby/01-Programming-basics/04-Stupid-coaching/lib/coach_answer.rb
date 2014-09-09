@@ -3,7 +3,7 @@ def coach_answer(your_message)
   if your_message=="I am going to work right now SIR !"
   return ""
   elsif your_message.end_with?("?")
-  return "Silly question, get dressed and go to work !!"
+  return "Silly question, get dressed and go to work !"
   else
   return "I don't care son, get dressed and go to work !"
   end
