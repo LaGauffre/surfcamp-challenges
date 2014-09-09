@@ -9,25 +9,30 @@ def get_rid_of_surrounding_whitespaces(a_string)
   return result
 end
 
+puts get_rid_of_surrounding_whitespaces(" Hey Yo ")
+
 def belongs_to?(a_string, a_word)
   # TODO: return true if a_string contains a_word
   # example: belongs_to?("hey jude", "jude") => true
-  result=a_string.partition.include?("a_word")
+  result=a_string.include?(a_word)
   return result
 end
+
+puts belongs_to?("hey jude", "jude")
 
 def replace(initial_string, old_letter, new_letter)
   # TODO: return a copy of the string with the new letter replacing the old one
   # example: replace("casanova", "a", "o") => "cosonovo"
-  result=initial_string.tr("old_letter","new_letter")
+  result=initial_string.tr(old_letter,new_letter)
   return result
-
 end
+
+puts replace("casanova", "a", "o")
 
 def exactly_divide(an_integer, a_divider)
   # TODO: return divison of an_integer by a_divider (computing the floating division, NOT the euclidean one)
   # example: exactly_divide(13, 4) => 3.25
-  result=an_integer.fdiv(a_divider).integer?
+  result=an_integer.fdiv(a_divider)
   return result
 end
 
